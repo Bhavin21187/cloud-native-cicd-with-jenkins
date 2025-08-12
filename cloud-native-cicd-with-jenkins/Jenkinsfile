@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "my-dockerhub-username/simple-app:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "bhavin825/simple-app:${BUILD_NUMBER}"
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/my-username/cloud-native-cicd-with-jenkins.git'
+                git branch: 'main', url: 'https://github.com/Bhavin21187/cloud-native-cicd-with-jenkins.git'
             }
         }
 
